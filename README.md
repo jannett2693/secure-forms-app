@@ -20,4 +20,7 @@ secure-forms-app/
 - **change-password.html**: Contiene el formulario de cambio de contraseña.
 - **js/scripts.js**: Contiene las validaciones en JavaScript para ambos formularios.
 
+## Solución a la vulnerabilidad
+
+La validación de usuario y contraseña se está realizando en el cliente, lo cual es inseguro porque cualquiera puede ver el código JavaScript y obtener las credenciales. Para solucionar esto, deberíamos realizar la validación en el servidor, donde la lógica y las credenciales están protegidas. En una implementación real, las credenciales se enviarían a un servidor seguro utilizando HTTPS y la validación se realizaría en el backend.
 
